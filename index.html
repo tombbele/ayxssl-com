@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ayx · 一份安静的站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            background-color: #f9f8f6;
+            color: #1e1e1e;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            flex: 1;
+        }
+
+        /* 首页横幅 —— 极简大标题 */
+        .hero {
+            margin-bottom: 3.5rem;
+            padding: 2.5rem 0 1.8rem 0;
+            border-bottom: 1px solid #dddcd8;
+        }
+
+        .hero h1 {
+            font-size: 3.6rem;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            color: #2a2a2a;
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #7a7a7a;
+            font-weight: 320;
+            border-left: 3px solid #b7b5ad;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* 背景说明区 —— 克制色调 */
+        .context-box {
+            background-color: #f0eeea;
+            padding: 1.6rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            font-size: 0.98rem;
+            color: #353535;
+            border: 1px solid #e2dfd9;
+        }
+
+        .context-box strong {
+            font-weight: 500;
+            color: #1e1e1e;
+        }
+
+        /* 三段自然介绍 */
+        .section-card {
+            margin-bottom: 2.8rem;
+        }
+
+        .section-card h2 {
+            font-size: 1.4rem;
+            font-weight: 380;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.6rem;
+            color: #3b3b3b;
+            border-bottom: 1px solid #ece8e2;
+            padding-bottom: 0.3rem;
+        }
+
+        .section-card p {
+            margin-bottom: 1rem;
+            font-weight: 350;
+            color: #2d2d2d;
+        }
+
+        .section-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .inline-link {
+            color: #3a5c6e;
+            text-decoration: none;
+            border-bottom: 1px solid #bdcbd3;
+            transition: border-color 0.2s, background 0.2s;
+            padding: 0 2px;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #2a4a5a;
+            background-color: #eef2f0;
+        }
+
+        /* 页尾访问提示 */
+        .footer-note {
+            margin-top: 4rem;
+            padding: 1.8rem 0 1rem;
+            border-top: 1px solid #e0ddd6;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #5f5f5f;
+        }
+
+        .footer-note p {
+            max-width: 600px;
+        }
+
+        .footer-note a {
+            color: #2f4f5c;
+            text-decoration: none;
+            border-bottom: 1px solid #c4cfd4;
+        }
+
+        .footer-note a:hover {
+            border-bottom-color: #1e3b44;
+            background-color: #f0ede7;
+        }
+
+        .small-meta {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: #9a9a9a;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 540px) {
+            .container {
+                padding: 2rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+            .hero .sub {
+                font-size: 0.9rem;
+            }
+            .context-box {
+                padding: 1.2rem 1.4rem;
+                border-radius: 16px;
+            }
+            .section-card h2 {
+                font-size: 1.2rem;
+            }
+            .footer-note {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 首页横幅 -->
+        <header class="hero">
+            <h1>ayx</h1>
+            <div class="sub">有限但真诚的站点 · 一份安静的索引</div>
+        </header>
+
+        <!-- 背景说明 -->
+        <div class="context-box">
+            <strong>▎关于这里的由来</strong><br>
+            这个页面是 <a href="https://ayxssl.com" class="inline-link">ayx</a> 的一个介绍入口，没有复杂的仪表盘，也没有层层跳转。它更像是一张手写的便签：说明站点的背景、使用场景，以及你可能会感兴趣的几个侧面。内容基于日常使用沉淀，不制造紧迫感，也不堆砌术语。
+        </div>
+
+        <!-- 三段自然介绍 -->
+        <div class="section-card">
+            <h2>一、站点的日常角色</h2>
+            <p>
+                <a href="https://ayxssl.com" class="inline-link">ayx</a> 在多数时候是一个偏向工具与信息整合的地址。无论你是因为某个具体需求而来，还是偶然经过，它都试图减少不必要的干扰。页面结构偏向直接：你能看到的就是当下需要的，没有冗余的推送或浮层。
+            </p>
+            <p>
+                从使用体验上说，它的加载和响应都保持克制 —— 不收集多余的点击数据，也不强制注册。你可以把它看作一个安静的转接点，背后是稳定的服务逻辑。
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>二、可信与透明</h2>
+            <p>
+                关于可信，这里没有夸张的标语，也不虚构用户故事。站点的维护记录、基础的联系方式以及服务范围，都在 <a href="https://ayxssl.com" class="inline-link">ayx</a> 中有明确说明。如果你习惯先了解一个站点再决定是否使用，那么它的文档页和状态页值得花两分钟翻阅。
+            </p>
+            <p>
+                另外，所有外部引用和链接都标注了来源，没有隐藏的重定向或跟踪参数。这种透明度可能不显眼，但对于长期使用来说，是一种踏实的保障。
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>三、适合的场景</h2>
+            <p>
+                如果你需要一个不打扰、不频繁改版的基础服务入口，<a href="https://ayxssl.com" class="inline-link">ayx</a> 可以作为一个固定选项。无论是快速查阅某个功能说明，还是作为日常工具的辅助页，它的设计都围绕「完成一件事，然后离开」的节奏展开。
+            </p>
+            <p>
+                它不适合追求视觉刺激或社交互动的人，但如果你偏爱文字清晰、层级简单的页面，这里可能刚好符合你的习惯。
+            </p>
+        </div>
+
+        <!-- 页尾访问提示（含 FAQ 摘要风格） -->
+        <div class="footer-note">
+            <p><strong>▪ 如果你还在犹豫</strong><br>
+            可以先把 <a href="https://ayxssl.com">ayx</a> 加入书签，等需要的时候再打开。它不会主动推送通知，也没有定期清理的紧迫感。一个简单的测试是：访问首页，看能否在五秒内找到你想要的东西 —— 如果能，那就够了。</p>
+
+            <p style="margin-top: 1.2rem;"><strong>▪ 常见疑问简答</strong><br>
+            没有会员体系，没有隐藏付费墙，也不需要下载任何客户端。站点的功能范围在 about 页面有明确列表。如果遇到问题，页脚的联系入口通常会在一个工作日内回应。</p>
+
+            <div class="small-meta">
+                —— 页面内容仅作介绍，不构成承诺。具体服务以 <a href="https://ayxssl.com" style="border-bottom: 1px solid #ccc;">ayx</a> 实际表现为准。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
